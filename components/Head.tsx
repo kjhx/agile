@@ -8,7 +8,7 @@ interface HeadProps {
 }
 
 const defaultDesc = 'Minimalist time tracking for agile teams.';
-const defaultOgImage = 'https://og.huggins.io/Minimalist%20time%20tracking%20for%20agile%20teams..png?theme=light&md=1&fontSize=100px';
+const defaultOgImage = '/og.png';
 
 const Head = ({ title, desc = defaultDesc, ogImage = defaultOgImage, children }: HeadProps) => {
   return (
