@@ -8,10 +8,10 @@ interface PageProps {
   ogImage?: string,
   header?: boolean,
   footer?: boolean,
-  children?: any
+  children?: JSX.Element
 }
 
-const Page = ({ title, desc, ogImage, header = true, footer = false, children }: PageProps) => {
+const Page = ({ title, desc, ogImage, header = true, footer = false, children }: PageProps): JSX.Element => {
   return (
     <>
       <Head
@@ -26,6 +26,6 @@ const Page = ({ title, desc, ogImage, header = true, footer = false, children }:
       </div>
     </>
   );
-}
+};
 
 export default Page;

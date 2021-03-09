@@ -3,11 +3,11 @@ import Link from '@components/Link';
 import { ArrowUpRight } from 'react-feather';
 import { useState } from 'react';
 
-export default function Home() {
+export default function Home(): JSX.Element {
   let startTime = new Date();
   const [startButtonText, setStartButtonText] = useState('Start');
   const [displayTime, setDisplayTime] = useState(0.0);
-  const [currentInterval, setCurrentInterval] = useState(setInterval(function () { }, 1000));
+  const [currentInterval, setCurrentInterval] = useState(setInterval(function () { return; }, 1000));
 
   const startButtonPressed = () => {
     if (startButtonText === 'Start') {
@@ -18,13 +18,13 @@ export default function Home() {
       setStartButtonText('Start');
       clearInterval(currentInterval);
     }
-  }
+  };
 
   const resetButtonPressed = () => {
     setStartButtonText('Start');
     clearInterval(currentInterval);
     setDisplayTime(0.0);
-  }
+  };
 
   const watch = () => {
     console.log(new Date());
@@ -37,7 +37,7 @@ export default function Home() {
     } else if (parseFloat(calculatedTime.toString()) >= 0.001) {
       setDisplayTime(+parseFloat(calculatedTime.toString()).toFixed(4));
     }
-  }
+  };
 
   return (
     <Page>

@@ -4,13 +4,13 @@ interface HeadProps {
   title: string,
   desc?: string,
   ogImage?: string,
-  children?: any
+  children?: JSX.Element
 }
 
 const defaultDesc = 'Minimalist time tracking for agile teams.';
 const defaultOgImage = '/og.png';
 
-const Head = ({ title, desc = defaultDesc, ogImage = defaultOgImage, children }: HeadProps) => {
+const Head = ({ title, desc = defaultDesc, ogImage = defaultOgImage, children }: HeadProps): JSX.Element => {
   return (
     <NextHead>
       <meta charSet='utf-8' />
@@ -41,6 +41,6 @@ const Head = ({ title, desc = defaultDesc, ogImage = defaultOgImage, children }:
       {children}
     </NextHead>
   );
-}
+};
 
 export default Head;
