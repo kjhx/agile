@@ -1,0 +1,48 @@
+html {
+  @apply bg-white dark:bg-black text-black dark:text-white;
+}
+
+#__next {
+  height: 100%;
+}
+
+::selection {
+  @apply bg-black text-white dark:bg-white dark:text-black;
+}
+
+@layer components {
+  h1 {
+    @apply text-lg lg:text-xl xl:text-2xl font-bold mb-1;
+  }
+
+  h2 {
+    @apply text-base lg:text-lg xl:text-xl font-bold mb-1;
+  }
+
+  h3 {
+    @apply text-base lg:text-lg xl:text-xl font-bold mb-1;
+  }
+
+  h4 {
+    @apply text-base lg:text-lg xl:text-xl font-bold;
+  }
+
+  article p {
+    @apply leading-relaxed pb-4;
+  }
+
+  article p:last-child {
+    @apply leading-relaxed pb-0;
+  }
+
+  .link-std {
+    @apply hover:underline;
+  }
+}
+
+@layer utilities {
+  .bg-blurred {
+    backdrop-filter: saturate(180%) blur(6px);
+    -webkit-backdrop-filter: saturate(180%) blur(6px);
+  }
+}
