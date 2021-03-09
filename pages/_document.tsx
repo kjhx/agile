@@ -1,7 +1,7 @@
-import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
+import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
 
 class Document extends NextDocument {
-  render() {
+  render(): JSX.Element {
     return (
       <Html lang='en' className='h-full'>
         <Head />
@@ -10,7 +10,7 @@ class Document extends NextDocument {
           <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }
 

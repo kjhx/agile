@@ -1,6 +1,6 @@
-const { version: appVersion } = require('package.json');
+import { version as appVersion } from 'package.json';
 
-const Header = () => {
+const Header = (): JSX.Element => {
   return (
     <header className='w-full p-6 font-semibold items-center border-b border-gray-300 dark:border-gray-600'>
       <div className='flex justify-between max-w-xl mx-auto'>
@@ -12,7 +12,7 @@ const Header = () => {
         </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
 export default Header;

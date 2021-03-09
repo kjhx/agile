@@ -7,7 +7,7 @@ interface LinkProps {
   children?: any
 }
 
-const Page = ({ href, to, styling = true, children }: LinkProps) => {
+const Page = ({ href, to, styling = true, children }: LinkProps): JSX.Element => {
   const anchorClasses = styling ? 'link-std' : 'no-underline';
 
   if (to) {
@@ -17,14 +17,14 @@ const Page = ({ href, to, styling = true, children }: LinkProps) => {
           {children}
         </a>
       </Link>
-    )
+    );
   } else {
     return (
       <a href={href as string} className={anchorClasses}>
         {children}
       </a>
-    )
+    );
   }
-}
+};
 
 export default Page;
