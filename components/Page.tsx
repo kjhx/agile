@@ -8,7 +8,7 @@ interface PageProps {
   ogImage?: string,
   header?: boolean,
   footer?: boolean,
-  children?: JSX.Element
+  children?: any
 }
 
 const Page = ({ title, desc, ogImage, header = true, footer = false, children }: PageProps): JSX.Element => {

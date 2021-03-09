@@ -4,7 +4,7 @@ interface HeadProps {
   title: string,
   desc?: string,
   ogImage?: string,
-  children?: JSX.Element
+  children?: any
 }
 
 const defaultDesc = 'Minimalist time tracking for agile teams.';

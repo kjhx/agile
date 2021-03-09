@@ -4,7 +4,7 @@ interface LinkProps {
   href?: string,
   to?: string,
   styling?: boolean,
-  children?: JSX.Element
+  children?: any
 }
 
 const Page = ({ href, to, styling = true, children }: LinkProps): JSX.Element => {
